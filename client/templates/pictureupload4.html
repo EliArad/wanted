@@ -1,0 +1,34 @@
+<form id="uploadForm4"
+      enctype="multipart/form-data"
+      action="/api/photo"
+      method="post">
+
+
+              <span class="btn btn-primary btn-file">
+
+
+ בחר תמונה
+              <input id="fileInputElement4"
+                     data-classIcon="icon-plus"
+                     data-buttonText="בחר תמונה"
+                     type="file"
+                     multiple="false"
+                     accept="image/jpeg"
+                     data-ng-model="theFile4"
+                     onchange="angular.element(this).scope().fileNameChanged4()"
+                      />
+                  </span>
+
+  <button type="button" ng-click="enablePictureDisplay(4,false)"  ng-show="showPicture4" class="btn btn-primary">מחק</button>
+
+  <div class="hearts" >
+        <img  id="img4"
+              src="{{imageSrc4}}"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="לחץ להפוך תמונה"
+              ng-click="roate(4)"
+              ng-show="showPicture4"
+              ng-style="{'width': pictureWidth , 'height': pictureHeight }" class="pictures"/>
+    </div>
+</form>

@@ -1,0 +1,125 @@
+<div ng-controller="GlobalController as vm">
+  <div ng-include="'client/views/NotifyUserForIncomingChatRequestModal.html'"></div>
+</div>
+<div ng-controller="HeaderController" class="header">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container ">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+        <ul class="nav navbar-nav navbar-left">
+
+
+
+
+
+          <li ng-if="!isAuthenticated"
+            ui-sref-active="active">
+            <a ui-sref="register">
+            <span class="glyphicon glyphicon-user">
+                  הרשם
+            </span>
+            </a>
+          </li>
+
+
+          <li ng-if="!isAuthenticated"
+            ui-sref-active="active">
+            <a ui-sref="login">
+            <span class="glyphicon glyphicon-log-in">
+התחבר
+            </span>
+            </a>
+          </li>
+
+
+          <li ng-if="isAuthenticated"
+            ui-sref-active="active">
+            <a ui-sref="logout">
+            <span class="glyphicon glyphicon-log-out">
+התנתק
+            </span>
+            </a>
+          </li>
+
+
+
+          <li ng-if="isAuthenticated"
+              ui-sref-active="active">
+            <a ui-sref="#">
+
+              {{hellousername}}
+
+            </a>
+          </li>
+
+
+
+
+        </ul>
+
+
+
+
+
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="help">עזרה</a></li>
+          <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="contact">צור קשר</a></li>
+          <li ui-sref-active="active"><a ui-sref="about">אודותינו</a></li>
+          <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="mail">הודעות    <span ng-show="yougotmail" ng-class="{ 'animated infinite bounce': true}"   style="color:purple" class="badge">{{numberofmails}}</span></a></li>
+
+          <!--
+          <li ng-if="isAuthenticated" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Test
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="test"> test</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="picturecrousle"> picture crouse</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="nggallery"> ng Gallery</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="imgresizer"> img resizer</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="galleryall"> members gallery</a></li>
+            </ul>
+          </li>
+          -->
+          <li ng-if="isAuthenticated" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">תצוגה
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="galleryall"> גלירת תמונות</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="main"> תצוגת כרטיסים</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="fullpagecardlist">תצוגת מסך מלא</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="mychatplaces">My chat place</a></li>
+            </ul>
+          </li>
+          <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="preferencessearch">העדפות חיפוש</a></li>
+
+          <!--
+          <li ng-if="isAuthenticated" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" ui-sref="memberdetails">
+              פרטים אישיים
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="memberdetails">כל הפרטים האישיים</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="coredetails">עדכן פרטי בסיס</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="mypictures">רק תמונות</a></li>
+              <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="deletecard">מחק כרטיס</a></li>
+            </ul>
+          </li>
+          -->
+          <li ng-if="isAuthenticated" ui-sref-active="active"><a ui-sref="memberdetails">כל הפרטים האישיים</a></li>
+          <a class="navbar-brand" style="cursor:pointer"   ng-click="partyDetail()" >Wanted</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "name": "angular-presence",
+  "description": "Angular directive and service for detecting user presence.",
+  "version": "0.2.3",
+  "license": "MIT",
+  "homepage": "http://katebe.github.io/angular-presence",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/katebe/angular-presence.git"
+  },
+  "main": "./angular-presence.js",
+  "author": {
+    "name": "Timo Brandes",
+    "email": "kaateebee@gmail.com"
+  },
+  "dependencies": {
+    "angular": "*"
+  },
+  "_release": "0.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.3",
+    "commit": "f7158b0de544fd4b5b9c2e8c564103b837a3d839"
+  },
+  "_source": "git://github.com/katebe/angular-presence.git",
+  "_target": "~0.2.3",
+  "_originalSource": "angular-presence"
+}
